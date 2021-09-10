@@ -41,7 +41,8 @@ int main()
 	for( int i=0;i<10; i++)
 		ofs.write( (char *)&s, sizeof(s));
 
-
+	// Need more implementation to read all student's information
+	// Make a function to find the Students information
 
 
 }
