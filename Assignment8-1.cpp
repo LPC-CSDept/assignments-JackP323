@@ -42,6 +42,8 @@ int binarySearch(int number[], int N, int target)
 
   return -1;
 	// you have only one return statement with the value -1
+	// Inside of while loop, when we find the target, we need to return the index of that value.
+	
 }
 
 
