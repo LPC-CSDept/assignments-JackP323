@@ -28,7 +28,7 @@ int binarySearch(int number[], int N, int target)
     {
       if (number [mid]  == target)
         cout << "found at index\n" << mid << endl;
-       else if (numbers [mid] < target) 
+       else if (number [mid] < target) 
        first = mid + 1;
        else
        last = mid - 1;
