@@ -26,7 +26,7 @@ int findMin(int numbers[], int N, int ith)
 {
 	int min, minidx, i;
 	min = numbers[ith];
-    for(int i=ith ;i<N;i++)
+    for( i=ith ;i<N;i++)
 	{
 		if ( min > numbers[i] )
 		{
