@@ -31,16 +31,32 @@ int main()
 
 	// Sort array
 
+  for(int i=0; i<TRY; i++){
+		target = array[rand() % 64];
+		total_linear += binarySearch(array, N, target);
+	}
+	cout << "The average comparison number " << total_linear / TRY << endl;
+
+
 
 	// call binarySearch TRY times
 
   int binarySearch(int array[],int N,int target);
-{
-    for(int i=0; i<TRY; i++){
-		target = array[rand() % 64];
-		total_linear += linearSearch(array, N, target);
-	}
-	cout << "The average comparison number " << total_linear / TRY << endl;
+
+{   int first, int last, int mid;
+
+    int cmp = 0;
+    first = 0;
+    last = N-1;
+    
+
+    while (first <= last) {
+      mid = (first + last) / 2;
+      
+    }
+
+
+    
 
 }
 
