@@ -14,6 +14,7 @@ struct Students {
 void printStudents(Students [], int);
 void makeStudents(Students [], int);
 void sortStudetns(Students [], int );
+int binarySearch(Students [], int , int );
 
 int main()
 {
@@ -30,6 +31,15 @@ int main()
 	// 2) Search the certain student information by the ID (or any other fields)
 	// binary search
 
+	int target = 10006677;
+
+	int result = binarySearch(s, N, target);
+	if ( result)
+	{
+		cout << "The student information \n";
+		cout << result << endl;
+	}
+
 
 }
 
@@ -39,8 +49,8 @@ void sortStudetns(Students s[], int N)
 	{
 		for(int j=0; j<N-1; j++)
 		{
-			// if (s[j].sname > s[j+1].sname)	
-			if ( strcmp(s[j].sname, s[j+1].sname) > 0 )	
+			if (s[j].sid > s[j+1].sid)	
+			// if ( strcmp(s[j].sname, s[j+1].sname) > 0 )	
 				swap(s[j], s[j+1]);
 		}
 	}
@@ -78,7 +88,8 @@ void printStudents(Students s[], int N)
 }
 
 
-int binarySearch(int array[], int N, int target)
+
+int binarySearch(Students array[], int N, int target)
 {
     int first, last, mid;
     int cmp = 0;
@@ -87,14 +98,13 @@ int binarySearch(int array[], int N, int target)
     last = N-1;
     while ( first <= last) 
     {
-		cmp += 1;
         mid = (first + last) / 2;
-        if ( array[mid] == target)
-            return cmp;
-        if ( array[mid] > target)
+        if ( array[mid].sid == target)
+            return mid;
+        if ( array[mid].sid > target)
             last = mid - 1;
         else 
             first = mid + 1;
     }
-    return cmp;
+    return -1;
 }
