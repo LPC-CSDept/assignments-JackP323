@@ -15,6 +15,9 @@ int main()
 	int 	* ptr;
 	ptr =  &num1;
 
-	cout << *ptr << endl; 
-	cout << *(ptr+1) << endl; 
+	cout << *ptr << "\t"; 
+	cout << *(ptr+1) << "\t";
+   cout << *(ptr + 2) << "\t";
+  cout << *(ptr + 3) << "\t"; 
+  cout << *(ptr + 4) << "\t"; 
 }
