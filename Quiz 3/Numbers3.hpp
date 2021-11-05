@@ -6,7 +6,7 @@ using namespace std;
 
 class Numbers
 {
-  [private:
+  private:
   int ID 
   vector<int> numbers;
 
