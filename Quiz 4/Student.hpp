@@ -1,33 +1,30 @@
-CS01	4	Fall2019 	
-ID   Name  Grade Score
-1001	John	A 	99.0
-1002	Kurt	B 	89.0 
-1003	Bill	A 	99.0 
-1004	Jim	A 	99.0 
-1005	Bob	C 	79.0 
-CS02	4	Spring2020	
-10
-1001	John	A 	99.0
-1002	Kurt	B 	89.0 
-1003	Bill	A 	99.0 
-1004	Jim	A 	99.0 
-1005	Bob	C 	79.0 
-1006 	Kate	D	69.5
-1007 	Jan	W	0.0
-1008	Amy	C 	78.5
-2001	Nick	A 	99.0
-2002 	Doe	B 	89.0
-CIS01	4	Fall2021
-5
-2001	Nick	A 	99.0
-2002 	Doe	B 	89.0
-2003	Mike 	C 	75.0
-1010 	Bob 	D 	65.0
-3001    White 	B 	85.0
-CNT02	4	Fall2021
-5
-1001	John	A 	99.0
-1002	Kurt	B 	89.0 
-2001	Nick	A 	99.0
-2002 	Doe	B 	89.0
-3001    White 	B 	85.0
+#ifndef Student_H
+#define Student_H
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Student{
+private:
+int ID;
+string sname;
+char grade;
+double scores;
+
+public:
+Student();
+Student(int,string,char,double);
+
+int getID();
+string getSName();
+char getGrade();
+double getScores();
+void setStudent(int,string,char,double);
+
+
+};
+
+#endif
