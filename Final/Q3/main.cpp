@@ -18,7 +18,7 @@ int main() {
     ProductWorker workers[10];
     fstream file;
     int fileNumber;
-    cout << "Enter 1 for file 1 or enter 2 for file 2" << endl;
+    cout << "Enter 1 for file 1 " << endl;
     cin >> fileNumber;
     if (fileNumber == 1) {
         file.open("Worker.txt");
