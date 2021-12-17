@@ -1,31 +1,39 @@
-#ifndef PRODUCTWORKER_H
-#define PRODUCTWORKER_H
-
-#include "Employee.cpp"
-
-
+#ifndef ProductWorker_h
+#define ProductWorker_h
+#include <iostream>
 using namespace std;
-
-class ProductWorker : public Employee{
- protected:
-    int shift;
-    double hourlyPayRate;
-
-  public:
-    ProductWorker() : Employee(){
-      };
-    
-    
-    void setShift(int SHIFT);
-    void setPay(double money);
-    int getShift();
-    double getPay();
-  friend class Employee;  
-  friend ostream& operator<<(ostream& COUT, ProductWorker& worker);
-  friend double operator > (const ProductWorker &Q, const ProductWorker &F);
-    
+class Employee{
+private:
+    string name;
+    string hiredate;
+    int number;
+public:
+    Employee();
+    Employee(string nm, string hrd, int snum);
+    string getName();
+    string getHireDate();
+    int getNumber();
+    void setName(string nm);
+    void setHireDate(string hrd);
+    void setNumber(int snum);
 };
 
+class ProductWorker : public Employee{
+private:
+    int shift;
+    double pay;
+    
+public:
+    ProductWorker();
+    ProductWorker(string n, string h, int num, int shf, double py);
+    int getShift();
+    double getPay();
+    void setShift(int shf);
+    void setPay(double py);
+    void setWorker(string n, string h, int num, int shf, double py);
+    void printWorker();
+    bool operator <(const ProductWorker& p);
+    friend int highestPay(ProductWorker workers[], int size);
+};
 
-
-#endif
+#endif 
