@@ -1,0 +1,10 @@
+100 Math
+200 Science
+300 P.E.
+400 Geometry
+500 Drama
+600 Swimming
+700 English
+800 AP Geometry
+900 TA
+999 Study
