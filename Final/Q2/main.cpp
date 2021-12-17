@@ -10,7 +10,7 @@ void recursive_quick_sort(Course[], int, int);
 void print(Course [], int);
 
 int main() {
-  int SIZE 10;
+  int SIZE = 10;
   Course Courses[SIZE];
   fstream ifs;
   ifs.open("Courses.txt");
@@ -27,11 +27,12 @@ int main() {
 
 
   
-  cout << "\n\nThe sorted courses using recursive quickSort are:\n";
+  cout << "The sorted courses are using  recursive quickSort are:";
   recursive_quick_sort(Courses, 0, SIZE - 1);
   print(Courses, SIZE);
   
   ifs.close();
+  return 0;
 }
 
 
@@ -64,5 +65,35 @@ void quick_sort(Course arr[], int low, int high) {
       stack[++top] = high;
     } 
   }
+
+
+}
+
+  int partition(Course arr[], int low, int high){
+    int pivot = arr[high].getID();
+  int i = (low - 1);
+
+  for (int j = low; j <= high - 1; j++) {
+    if (arr[j].getID() <= pivot) {
+      i++;
+      swap(arr[i], arr[j]);
+    }
+  }
+  swap(arr[i + 1], arr[high]);
+
+  return (i + 1);
+
+
   
+   
+
+}
+void recursive_quick_sort(Course arr[], int low, int high) {
+
+  if (low < high) {
+    int pivot = partition(arr, low, high);
+    recursive_quick_sort(arr, low, pivot - 1);
+    recursive_quick_sort(arr, pivot + 1, high);
+  }
+
 }
