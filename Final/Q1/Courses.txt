@@ -1,10 +1,10 @@
-100 Math
-200 Science
-300 P.E.
-400 Geometry
-500 Drama
-600 Swimming
-700 English
-800 AP Geometry
-900 TA
-999 Study
+100 Math  3
+200 Science 5
+300 P.E. 6 
+400 Geometry 2
+500 Drama 2
+600 Swimming 5 
+700 English 4 
+800 AP Geometry 8 
+900 TA 7 
+999 Study 2
