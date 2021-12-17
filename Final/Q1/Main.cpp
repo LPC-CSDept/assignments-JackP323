@@ -47,6 +47,34 @@ int main() {
     file.open ("Courses.txt");
   }
     else {  
-      
+      cout << "Invalid Input" << endl;
     }
+    for (int i=0; i<10; i++) {
+        int id;
+        string n;
+        int c;
+        file >> id >> n >> c;
+        Courses[i].setCourse(id, n, c);
+    }
+    
+    cout << "The courses are: " << endl;
+    bubbleSortbyID(Courses, 10);
+    printCourses(Courses, 10);
+    cout << endl;
+    
+    cout << "Find a course using iterative binary search by entering the ID number: ";
+    cin >> ID;
+    cout << endl;
+    
+    int found = binarySearchIterative(Courses, 10, ID);
+    if(found != -1){
+        cout << "The course was located at index " << found << ". Output of the course info:" << endl;
+        Courses[found].printAll();
+    }
+    else{
+        cout << "The course doesn't exist." << endl;
+    }
+
+    file.close();
+    return 0;
 }
