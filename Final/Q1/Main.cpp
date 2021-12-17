@@ -37,36 +37,16 @@ void bubbleSortbyID(Course s[], int N)
 }
 
 int main() {
-    int ID;
-    Course courses[10];
-    fstream file;
-    int fileNumber;
-    cout << "Enter 1 for file 1" << endl;
-    cin >> fileNumber;
-    if (fileNumber == 1) {
-        file.open("Courses.txt");
-    
-    for (int i=0; i<10; i++) {
-        int id;
-        string n;
-        int c;
-        file >> id >> n >> c;
-        courses[i].setCourse(id, n, c);
+  int ID;
+  Course Courses[10];
+  fstream file;
+  int fileNumber;
+  cout << "Enter 1 for File 1" << endl;
+  cin >> fileNumber;
+  if (fileNumber == 1) {
+    file.open ("Courses.txt");
+  }
+    else {  
+      
     }
-    
-    cout << "Find a course using iterative binary search by entering the ID number: ";
-    cin >> ID;
-    cout << endl;
-    
-    int found = binarySearchIterative(courses, 10, ID);
-    if(found != -1){
-        cout << "The course was located at index " << found << "The Course info is :" << endl;
-        courses[found].printAll();
-    }
-    else {
-        cout << "The course doesn't exist." << endl;
-    };
-
-    file.close();
-    return 0;
 }
